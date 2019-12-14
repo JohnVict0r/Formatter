@@ -1,12 +1,6 @@
-# Formatter
- facilitator to format the form fields
+# Input-Formatter
 
-# formatter
-
-This is a simple library designed to do one thing and one thing only -
-replace variables in strings with variable values.  It is built in such a
-way that the formatter strings are parsed and you are provided with a
-function than can efficiently be called to provide the custom output.
+This is a simple library designed to format the form fields
 
 [![NPM](https://nodei.co/npm/input-formatter.png)](https://nodei.co/npm/input-formatter/)
 
@@ -16,7 +10,6 @@ function than can efficiently be called to provide the custom output.
 const formatter = require('input-formatter');
 
 // using in input form
-
 ```
 
 ## Nested Property Values
@@ -47,5 +40,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
