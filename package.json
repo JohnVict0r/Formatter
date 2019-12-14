@@ -1,0 +1,29 @@
+{
+  "name": "input-formatter",
+  "version": "1.0.0",
+  "description": "facilitator to format the form fields",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnVict0r/Formatter.git"
+  },
+  "keywords": [
+    "formatter",
+    "mask",
+    "input",
+    "form"
+  ],
+  "author": "John Victor <johnvictorio3@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnVict0r/Formatter/issues"
+  },
+  "homepage": "https://github.com/JohnVict0r/Formatter#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6"
+  }
+}
