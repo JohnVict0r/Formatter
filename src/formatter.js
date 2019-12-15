@@ -1,23 +1,22 @@
-const formatter = (mask, input) => {
-  try {
-    const i = input.value.length;
-    const output = mask.substring(0, 1);
-    const text = mask.substring(i);
-    const key = window.event ? event.keyCode : e.which;
+const formatter = {
+  cpfMask: value => {
+    return value
+      .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
+      .replace(/(\d{3})(\d)/, '$1.$2') // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
+      .replace(/(\d{3})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+      .replace(/(-\d{2})\d+?$/, '$1'); // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+  },
 
-    if (key > 47 && key < 58) {
-      if (text.substring(0, 1) != output) {
-        input.value += text.substring(0, 1);
-      }
-    } else {
-      if (key == 8 || key == 0) {
-        if (text.substring(0, 1) != output) {
-          input.value += text.substring(0, 1);
-        }
-      } else return false;
-    }
-  } catch (e) {
-    return false;
+  cepMask: value => {
+    return value
+      .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
+      .replace(/(\d{5})(\d)/, '$1-$2') // captura 1 grupo de numero, apos capturar o grupo ele adiciona um traço antes do segundo grupo de numero
+      .replace(/(-\d{3})\d+?$/, '$1'); // captura 3 numeros seguidos de um traço e não deixa ser digitado mais nada
+  },
+
+  numberMask: value => {
+    return value.replace(/\D/g, ''); // substitui qualquer caracter que nao seja numero por nada
   }
 };
 
